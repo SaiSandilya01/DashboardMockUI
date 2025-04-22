@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vulnerability Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">*Insert Logo</div>
+      <nav class="nav">
+        <div class="nav-item active"> Dashboard</div>
+        <div class="nav-item"> Projects</div>
+        <div class="nav-item"> Settings</div>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+      <h1 class="title">Dashboard</h1>
+
+      <!-- Summary cards -->
+      <div class="cards">
+        <div class="card critical">
+          <p>Critical</p>
+          <h2>5</h2>
+        </div>
+        <div class="card high">
+          <p>High</p>
+          <h2>9</h2>
+        </div>
+        <div class="card medium">
+          <p>Medium</p>
+          <h2>23</h2>
+        </div>
+        <div class="card low">
+          <p>Low</p>
+          <h2>14</h2>
+        </div>
+      </div>
+
+      <!-- Accordion Section -->
+      <details class="accordion">
+        <summary class="accordion-title">GitLab Project A</summary>
+        <table class="vuln-table">
+          <thead>
+            <tr>
+              <th>Vulnerability</th>
+              <th>Project</th>
+              <th>Severity</th>
+              <th>Source</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>SQL Injection</td>
+              <td>GitLab Project</td>
+              <td><span class="tag critical">Critical</span></td>
+              <td>Snyk</td>
+              <td><button class="resolve">Resolve</button></td>
+            </tr>
+            <tr>
+              <td>Cross-Site Scripting (XSS)</td>
+              <td>GitLab Project</td>
+              <td><span class="tag medium">Medium</span></td>
+              <td>SonarQube</td>
+              <td><button class="resolve">Resolve</button></td>
+            </tr>
+            <tr>
+              <td>Unrestricted File Upload</td>
+              <td>GitLab Project</td>
+              <td><span class="tag high">High</span></td>
+              <td>Snyk</td>
+              <td><button class="resolve">Resolve</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </details>
+
+      <details class="accordion">
+        <summary class="accordion-title">GitLab Project B</summary>
+        <p>No vulnerabilities found.</p>
+      </details>
+    </main>
+  </div>
+</body>
+</html>

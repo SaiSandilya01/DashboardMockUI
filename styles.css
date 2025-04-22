@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f3f4f6;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #f3f4f6;
+  border-right: 1px solid #e5e7eb;
+  padding: 24px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.nav-item {
+  font-size: 16px;
+  color: #374151;
+  cursor: pointer;
+}
+
+.nav-item.active {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.main {
+  flex: 1;
+  padding: 32px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.cards {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: white;
+  padding: 16px;
+  border-radius: 8px;
+  flex: 1;
+  min-width: 180px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.card:not(:last-child) {
+  margin-right: 16px;
+}
+.card p {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.card h2 {
+  font-size: 24px;
+  margin: 8px 0 0 0;
+}
+
+.card.critical h2 { color: #dc2626; }
+.card.high h2 { color: #ea580c; }
+.card.medium h2 { color: #ca8a04; }
+.card.low h2 { color: #9ca3af; }
+
+.accordion {
+  background-color: white;
+  margin-bottom: 16px;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.accordion-title {
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.vuln-table {
+  width: 100%;
+  margin-top: 16px;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.vuln-table th,
+.vuln-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tag {
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 12px;
+  display: inline-block;
+}
+
+.tag.critical {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.tag.high {
+  background-color: #ffedd5;
+  color: #c2410c;
+}
+
+.tag.medium {
+  background-color: #fef9c3;
+  color: #a16207;
+}
+
+.resolve {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.resolve:hover {
+  background-color: #2563eb;
+}
